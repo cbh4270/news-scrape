@@ -1,0 +1,89 @@
+h1 {
+    font-family: 'Bangers', cursive;
+    color: white;
+    text-align: center;
+    font-size: 100px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+   
+}
+h2 {
+    font-family: 'Bangers', cursive;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+
+body {
+  background-color: black;
+}
+
+.bkrd {
+    background-image: url("images/keyboard.jpg");
+    width: 100%;
+    height: 800px; 
+    
+  
+    /* Center and scale the image nicely */
+   
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+    height: 60px;
+    padding-top: 15px;
+ }
+ /* #pop-display {
+     background-color: white;
+     color: black;
+ } */
+
+ 
+ #wrapper {
+   width: 960px;
+   margin-left: auto;
+   margin-right: auto;
+   padding-top: 5%;
+ }
+ #articles {
+   /* display: inline-block;
+   overflow: auto;
+   width: 60%; */
+   height: 100%;
+   color: black;
+   text-align: left;
+   background-color: white;
+   margin-left: 120px;
+   margin-top: 110px;
+   padding: 150px;
+   font-family: 'Bangers', cursive;
+   font-size: x-large;
+ }
+ #notes {
+   float: right;
+   width: 30%;
+   color: white ;
+   padding-left: 90px;
+ }
+ textarea, input {
+   display: block;
+   width: 100%;
+   background-color: #FCF5C7;
+ }
+ input {
+   height: 36px;
+   font-size: 24px;
+ }
+ textarea {
+   height: 200px;
+   font-size: 18px;
+ }
