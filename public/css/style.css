@@ -22,7 +22,7 @@ body {
 .bkrd {
     background-image: url("images/keyboard.jpg");
     width: 100%;
-    height: 800px; 
+    height: 500px; 
     
   
     /* Center and scale the image nicely */
@@ -42,6 +42,7 @@ footer {
     height: 60px;
     padding-top: 15px;
  }
+
  /* #pop-display {
      background-color: white;
      color: black;
@@ -54,20 +55,24 @@ footer {
    margin-right: auto;
    padding-top: 5%;
  }
- #articles {
-   /* display: inline-block;
-   overflow: auto;
-   width: 60%; */
-   height: 100%;
+   .card-columns {
+  
+   
+   
    color: black;
    text-align: left;
    background-color: white;
-   margin-left: 120px;
-   margin-top: 110px;
-   padding: 150px;
+    margin: 100px;
+    margin-top: 60px;
+  padding: 30px;
    font-family: 'Bangers', cursive;
-   font-size: x-large;
- }
+   font-size: x-large; 
+   column-gap: 1.25rem
+   column-count: 3
+ } 
+ 
+ 
+ 
  #notes {
    float: right;
    width: 30%;
@@ -87,3 +92,4 @@ footer {
    height: 200px;
    font-size: 18px;
  }
+

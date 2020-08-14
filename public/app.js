@@ -10,12 +10,27 @@ $.getJSON("/articles", function(data) {
 
   // }
    for (var i = 0; i < data.length; i++) {
-     var cardImg = $('<div class="card">').append($('<a href="' + data[i].link + '" target="_blank"><img src="' + data[i].image + '" class = "card-img-top"></a>'));
-     // var card = $('<div class="card-body">').append($('<h5 class="card-title">' + data[i].title + '</h5><footer class="blockquote-footer"><small class="text-muted">' + data[i].author + ' <cite title="Source Title">' + data[i].category + '</cite></small><button class="note-button" type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModal" data-id="' + data[i]._id + '">Notes</button></footer>'));
-     var card = $('<div class="card-body">').append($('<h5 class="card-title">' + data[i].title + '</h5><footer class="blockquote-footer"><small class="text-muted"></cite></small><button class="note-button" type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModal" data-id="' + data[i]._id + '">Notes</button></footer>'));
+    
+    var cardImg = $('<div class="card">').append($('<a href= https://www.cnet.com' + data[i].link + ' target="_blank"><img src="' + data[i].image + '" class = "card-img-top"></a>'));
+   var card = $('<div class="card-body">').append($('<h5 class="card-title">' + data[i].title + '</h5><div class="note-but"><small class="text-muted"> <cite title="Source Title"></cite></small><button class="note-button" type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModal" data-id="' + data[i]._id + '">Notes</button></div>'));
 
-     $(cardImg).append(card);
+    
+    $(cardImg).append(card);
      $(".card-columns").append(cardImg);
+    
+    
+    
+    
+    //  var cardImg = $('<div class="card">').append($('<a href="' + data[i].link + '" target="_blank"><img src="' + data[i].image + '" class = "card-img-top"></a>'));
+     // var card = $('<div class="card-body">').append($('<h5 class="card-title">' + data[i].title + '</h5><footer class="blockquote-footer"><small class="text-muted">' + data[i].author + ' <cite title="Source Title">' + data[i].category + '</cite></small><button class="note-button" type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModal" data-id="' + data[i]._id + '">Notes</button></footer>'));
+    //  var card = $('<div class="card-body">').append($('<h5 class="card-title">' + data[i].title + '</h5><footer class="blockquote-footer"><small class="text-muted"></cite></small><button class="note-button" type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModal" data-id="' + data[i]._id + '">Notes</button></footer>'));
+   
+   
+     //  $("#articles").append("<p data-id='" + data[i]._id + "'>" + data[i].title + "<br />" + data[i].link + "</p>");
+
+     
+     
+     
   }
 });
 
@@ -37,7 +52,7 @@ $(document).on("click", "#clear", function () {
   })
     .then(function (data) {
       console.log(data);
-      $("#articles").empty().hide();
+      $(".card-columns").empty().hide();
       $("#notes").empty().hide();
     });
 });

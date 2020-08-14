@@ -62,18 +62,7 @@ app.get("/scrape", function(req, res) {
        .children()
        .children("a")
        .children("h2")
-       .text();
-
-       result.text = $(this)
-       .children()
-       .children("a")
-       .children(".dek")
-       .text()
-      
-       result.link = $(this)
-       .children()
-       .children("a")
-       .attr("href");
+       .text();    
 
        result.image = $(this)
        .children()
@@ -81,6 +70,21 @@ app.get("/scrape", function(req, res) {
        .children("figure")
        .children("img")
        .attr("src");
+
+           
+       result.link = $(this)
+       .children()
+       .children("a")
+       .attr("href");
+
+
+
+       //    result.text = $(this)
+    //    .children()
+    //    .children("a")
+    //    .children("h2")
+    //    .children("p.dek")
+    //    .text()
 
        
 
