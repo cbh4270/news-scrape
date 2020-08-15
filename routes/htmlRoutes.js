@@ -3,12 +3,14 @@ var path = require("path");
 
 module.exports = function(app) {
 
-    app.get("/page2", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/page2.html"));
+    app.get("/saved", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/saved.html"));
     });
 
-    // If no matching route is found default to home
-    app.get("*", function(req, res) {
+    app.get("/home", function(req, res) {
         res.sendFile(path.join(__dirname, "../public/index.html"));
     });
+
+   
 };
+

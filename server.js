@@ -10,8 +10,9 @@ var cheerio = require("cheerio");
 
 // Require all models
 var db = require("./models");
+//const htmlRoutes = require("./routes/htmlRoutes");
 
-var PORT = 3232;
+var PORT = 2111;
 
 // Initialize Express
 var app = express();
@@ -35,6 +36,13 @@ mongoose.connect("mongodb://localhost/TechScrape", { useNewUrlParser: true });
 
 // Routes
 
+var routes = require("./routes/htmlRoutes")
+routes(app)
+
+var apiRoutes = require("./routes/apiRoutes")
+
+apiRoutes(app)
+
 // A GET route for scraping the echoJS website
 app.get("/scrape", function(req, res) {
   // First, we grab the body of the html with axios
@@ -42,22 +50,12 @@ app.get("/scrape", function(req, res) {
     // Then, we load that into cheerio and save it to $ for a shorthand selector
     var $ = cheerio.load(response.data);
 
-    // https://www.cnet.com/topics/computers/
-
+    
     //Now, we grab every h2 within an article tag, and do the following:
      $("div.asset").each(function(i, element) {
 
-      //  if  ( $(this)
-      //  .children("div.assetThumb")
-      //  .children("a")
-      //  .attr("href")){
-       // Save an empty result object
        var result = {};
-      // console.log(element)
-       // Add the text and href of every link, and save them as properties of the result object
-       
-      
-
+    
        result.title = $(this)
        .children()
        .children("a")
@@ -84,37 +82,7 @@ app.get("/scrape", function(req, res) {
     //    .children("a")
     //    .children("h2")
     //    .children("p.dek")
-    //    .text()
-
-       
-
-        // result.text = $(this)
-        // .children("div.assetBody")
-        // .children("a")
-        // .children("p.dek")
-        // .text()
-
-       
-
-        // result.link = $(this)
-        // .children("div.assetThumb")
-        // .children("a")
-        // .attr("href");
-       
-     
-      //  result.image = $(this)
-      //  .children("div.assetThumb")
-      //  .children ("a")
-      //  .children("figure")
-      //  .children("img")
-      //  .attr("src")
-
-       
-
-       
-
-     
-       
+    //    .text()       
 
         console.log (result)
 
